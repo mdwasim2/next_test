@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme{
+     --font-poppins: "var(--font-poppins)";
+     --font-nunito: "--font-nunito";
+}
