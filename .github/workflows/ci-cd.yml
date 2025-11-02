@@ -29,4 +29,4 @@ jobs:
 
       # 5️⃣ Deploy to Vercel (optional)
       - name: Deploy to Vercel
-        run: npx vercel --token=${{ secrets.VERCEL_TOKEN }} --prod
+        run: npx vercel --token=${{ secrets.VERCEL_TOKEN }} --prod --yes --confirm
