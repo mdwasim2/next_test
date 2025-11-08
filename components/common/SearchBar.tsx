@@ -1,34 +1,14 @@
-"use client";
+import { Search } from "lucide-react";
 
-import React, { useState } from "react";
-
-export default function SearchBar() {
-  const [query, setQuery] = useState("");
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // redirect to search results, e.g. /search?q={query}
-    window.location.href = `/search?q=${encodeURIComponent(query)}`;
-  };
-
+export function SearchBar({ mobile = false }) {
   return (
-    <form
-      onSubmit={onSubmit}
-      className="hidden md:flex items-center w-full max-w-md"
-    >
+    <div className={`relative ${mobile ? "w-full" : "w-64"}`}>
+      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
       <input
         type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
         placeholder="Search products..."
-        className="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-indigo-500"
+        className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
       />
-      <button
-        type="submit"
-        className="px-4 py-2 bg-indigo-600 text-white rounded-r-md hover:bg-indigo-700"
-      >
-        Search
-      </button>
-    </form>
+    </div>
   );
 }

@@ -1,12 +1,22 @@
-import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
 
-export default function Logo({ className = "" }: { className?: string }) {
+export default function Logo({
+  className = "",
+  src,
+  title,
+}: {
+  className?: string | StaticImageData;
+  src?: string;
+  title?: string;
+}) {
   return (
-    <Link
-      href="/"
-      className={`text-2xl font-bold text-indigo-600 ${className}`}
-    >
-      MyShop
-    </Link>
+    <div className="flex items-center space-x-2">
+      <div>
+        <Image src={src} alt="logo" width={50} height={50} />
+      </div>
+      <span className="text-2xl font-bold bg-primary bg-clip-text text-transparent">
+        {title}
+      </span>
+    </div>
   );
 }

@@ -10,24 +10,21 @@ interface IconButtonProps
 }
 
 export default function IconButton({
-  icon: IconComp,
+  icon: Icon,
   badgeCount = 0,
   label,
   className = "",
   ...props
 }: IconButtonProps) {
   return (
-    <button
-      className={`relative inline-flex items-center justify-center p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${className}`}
-      {...props}
-      aria-label={label}
-    >
-      <IconComp className="h-6 w-6 text-gray-700" />
+    <button className="relative p-2 hover:bg-white rounded-full transition-all duration-200 group">
+      <Icon className="h-5 w-5 text-primary-black transition-colors" />
       {badgeCount > 0 && (
-        <span className="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white bg-red-600 rounded-full transform translate-x-1/2 -translate-y-1/2">
+        <span className="absolute -top-1 -right-1 bg-primary text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
           {badgeCount}
         </span>
       )}
+      <span className="sr-only">{label}</span>
     </button>
   );
 }
