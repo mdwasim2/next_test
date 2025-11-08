@@ -116,7 +116,7 @@ export default function Header() {
                   </nav>
 
                   {/* Account Section */}
-                  <div className="mb-8 p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
+                  <div className="mb-8 p-4 bg-primary from-purple-50 to-pink-50 rounded-xl">
                     <h3 className="text-sm font-semibold text-primary mb-3">
                       Your Account
                     </h3>

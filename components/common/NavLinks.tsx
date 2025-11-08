@@ -21,9 +21,6 @@ export function NavLinks({ mobile = false, navlinks }) {
               {link.badge}
             </span>
           )}
-          {!mobile && (
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
-          )}
         </a>
       ))}
     </>
