@@ -1,9 +1,10 @@
+import Banner from "@/components/banner/Banner";
+import Container from "@/components/common/Container";
+
 export default function page() {
   return (
-    <div className="mt-40">
-      <h1 className="text-3xl font-bold underline">
-        Welcome to Nirapod Shop BD
-      </h1>
-    </div>
+    <Container className="mt-10">
+      <Banner />
+    </Container>
   );
 }

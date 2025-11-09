@@ -32,8 +32,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const links = [
+    { name: "Shop" },
     { name: "New Arrivals", icon: TrendingUp, badge: "Hot" },
-    { name: "Shop", icon: ChevronDown },
     { name: "Deals", icon: Tag, badge: "Sale" },
     { name: "About", icon: null },
   ];
@@ -63,7 +63,7 @@ export default function Header() {
             <Logo
               // @ts-ignore
               src={LogoURl}
-              title="Nirapod Shop"
+              title="Shop"
             />
 
             {/* Desktop navigation */}
