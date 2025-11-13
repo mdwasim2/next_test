@@ -14,9 +14,7 @@ export default function Logo({
       <div>
         <Image src={src} alt="logo" width={50} height={50} />
       </div>
-      <span className="text-2xl font-bold bg-primary bg-clip-text text-transparent">
-        {title}
-      </span>
+      <span className="text-2xl font-bold  text-transparent">{title}</span>
     </div>
   );
 }
